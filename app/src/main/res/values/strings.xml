@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Acesso Aluno</string>
+    <string name="user">Usuário:</string>
+    <string name="password">Senha:</string>
+    <string name="acess">Acesso</string>
+    <string name="exit">Sair</string>
+    <string name="back">Voltar</string>
+    <string name="user_invalid">Não Foi Possível Realizar o login, por favor verifique o seu RGM e senha</string>
+
+    <string name="item_aula_registrar">Registrar presença</string>
+    <string name="item_aula_registrada">A Presença já foi registrada!</string>
+    <string name="item_aula_inicio">Ínicio:</string>
+    <string name="item_aula_fim">Fim:</string>
+    <string name="item_aula_professor">Professor:</string>
+    <string name="title_activity_informacoes">Informacoes</string>
+
+</resources>
