@@ -6,15 +6,18 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.example.acessoaluno.database.MakeActions
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var user:EditText
     private lateinit var password:EditText
     private lateinit var btnEnter:Button
     private lateinit var btnExit:Button
     private lateinit var select: MakeActions
     private lateinit var textError:TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         password.setText("umasenha")
 
         btnExit.setOnClickListener {
-            finish()
             this.moveTaskToBack(true)
+            finish()
         }
         btnEnter.setOnClickListener {
             val userText:String = user.text.toString()

@@ -7,17 +7,19 @@ import android.database.sqlite.SQLiteDatabase
 import com.example.acessoaluno.DIA
 
 class Generate(private val gw: SQLiteDatabase?) {
+
     fun registrarAluno(RGM:String,senha:String,aula:Array<Int>?){
         val cv = ContentValues()
-        cv.put("rgm",RGM)
-        cv.put("senha",senha)
+        cv.put("rgm","$RGM")
+        cv.put("senha","$senha")
         gw!!.insertOrThrow("Aluno", null, cv)
         if(aula != null){
-            val cursor:Cursor = gw.rawQuery("SELECT rgm FROM Aluno WHERE rgm=$RGM",null)
+            val cursor:Cursor = gw.rawQuery("SELECT rgm FROM Aluno WHERE rgm='$RGM'",null)
+            val newC = gw.rawQuery("SELECT rgm FROM Aluno",null)
             cursor.moveToFirst()
             if(cursor.count > 0){
                 val rgmColumn = cursor.getColumnIndex("rgm")
-                val id:Int = cursor.getInt(rgmColumn)
+                val id = cursor.getString(rgmColumn)
                 for(actualAula in aula){
                     val cv2 = ContentValues()
                     cv2.put("aluno",id)

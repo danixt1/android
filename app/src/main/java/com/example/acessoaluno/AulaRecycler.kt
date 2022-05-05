@@ -78,6 +78,7 @@ class AulaRecycler(private val aulas:Array<Aula>,private val rgm:String):Recycle
                         }
                     }.addOnCanceledListener {
                         Toast.makeText(holder.context,"Não foi possível obter a localização",Toast.LENGTH_SHORT).show()
+                    }.addOnFailureListener {
                     }
                 }
             }else{

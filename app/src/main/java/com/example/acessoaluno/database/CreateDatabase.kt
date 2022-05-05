@@ -24,8 +24,14 @@ class CreateDatabase(private val context: Context) : SQLiteOpenHelper(context,DA
         putVals.registrarAula(DIA.SEGUNDA,"Mario",510,670,"Natação")
         putVals.registrarAula(DIA.TERCA,"Mario",510,670,"Academia")
         putVals.registrarAula(DIA.TERCA,"Mario",1200,1260,"Outra Aula")
+        putVals.registrarAula(DIA.TERCA,"Mario",1200,1260,"Mais Uma")
+
+        putVals.registrarAula(DIA.TERCA,"Marcos",0,1260,"Aula de teste terça")
+        putVals.registrarAula(DIA.QUINTA,"Marcos",0,1260,"Aula de teste quinta")
+
         putVals.registrarAluno("24461096","umasenha",arrayOf(1,2,3,4))
         putVals.registrarAluno("13361096","senhaforte",arrayOf(5,6,7))
+        putVals.registrarAluno("teste","teste",arrayOf(8,9,10))
     }
 
     override fun onUpgrade(p0: SQLiteDatabase, p1: Int, p2: Int) {

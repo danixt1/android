@@ -60,8 +60,8 @@ class Informacoes : AppCompatActivity() {
 
     }
     fun btnBack(view: View){
-        intent = Intent(this,MainActivity::class.java)
         finish()
-        startActivity(intent)
+        //intent = Intent(this,MainActivity::class.java)
+        //startActivity(intent)
     }
 }

@@ -17,16 +17,25 @@ class MakeActions(ctx:Context) {
         return gw!!.database.rawQuery("SELECT ID,rgm,senha FROM Aluno WHERE rgm='$RGM' AND senha='$password'",null).count >0
     }
     fun RegisterIfNotRegistred(rgm: String,aula:Int):Boolean{
-        val query = "SELECT ID FROM Presenca WHERE aluno='$rgm' AND aula=$aula and data=datetime('now')"
+        val result2 = gw!!.database.rawQuery("SELECT data,aluno FROM Presenca",null)
+        while(result2.moveToNext()){
+            val indexDate = result2.getColumnIndex("data")
+            val indexAluno = result2.getColumnIndex("data")
+            val showDate = result2.getString(indexDate)
+            val showAluno = result2.getString(indexAluno)
+            print("")
+        }
+        val query = "SELECT ID,data FROM Presenca WHERE aluno='$rgm' AND aula=$aula and data=DATE('now')"
         val result = gw!!.database.rawQuery(query,null)
         if(result.count > 0){
             return false
         }else{
-            val vals = ContentValues()
-            vals.put("data","datetime('now')")
-            vals.put("aluno",rgm)
-            vals.put("aula",aula)
-            gw!!.database.insert("Presenca",null,vals)
+            gw!!.database.execSQL("INSERT INTO Presenca(data,aluno,aula) VALUES(DATE('now'),'$rgm',$aula)")
+            //val vals = ContentValues()
+            //vals.put("data","DATE('now')")
+            //vals.put("aluno",rgm)
+            //vals.put("aula",aula)
+            //gw!!.database.insert("Presenca",null,vals)
             return true
         }
     }
