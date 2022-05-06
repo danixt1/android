@@ -7,6 +7,7 @@
     <string name="back">Voltar</string>
     <string name="user_invalid">Não Foi Possível Realizar o login, por favor verifique o seu RGM e senha</string>
 
+    <string name="informacoes_title">Aulas de hoje</string>
     <string name="item_aula_registrar">Registrar presença</string>
     <string name="item_aula_registrada">A Presença já foi registrada!</string>
     <string name="item_aula_inicio">Ínicio:</string>
@@ -14,4 +15,10 @@
     <string name="item_aula_professor">Professor:</string>
     <string name="title_activity_informacoes">Informacoes</string>
 
+    <string name="recycler_gps_not_in_university">É Necessário estar na unicid para registrar a presença</string>
+    <string name="recycler_gps_fail_location">Não foi possível obter a localização</string>
+    <string name="recycler_already_registred">Você já registrou a presença</string>
+    <string name="recycler_out_hour">Não foi possível registrar a presença, fora do horario</string>
+    <string name="recycler_gps_authorization">É necessário permitir o aplicativo acessar a localização</string>
+    <string name="recycler_sucess">Presença registrada com sucesso!</string>
 </resources>

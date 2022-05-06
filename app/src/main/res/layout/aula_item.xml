@@ -6,21 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="220dp"
     android:layout_gravity="center_horizontal">
+
     <TextView
         android:id="@+id/materia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"/>
 
     <TableLayout
+        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="28dp"
         android:layout_marginRight="4dp"
         android:background="#BABABA"
         android:gravity="center_horizontal"
@@ -31,34 +32,34 @@
         <TableRow>
 
             <TextView
-                android:layout_width="96dp"
+                android:layout_width="@dimen/recycler_colum1"
                 android:text="@string/item_aula_inicio" />
 
             <TextView
                 android:id="@+id/inicio"
-                android:layout_width="wrap_content" />
+                android:layout_width="@dimen/recycler_colum2" />
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:layout_width="96dp"
+                android:layout_width="@dimen/recycler_colum1"
                 android:text="@string/item_aula_fim" />
 
             <TextView
                 android:id="@+id/fim"
-                android:layout_width="wrap_content" />
+                android:layout_width="@dimen/recycler_colum2" />
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:layout_width="96dp"
+                android:layout_width="@dimen/recycler_colum1"
                 android:text="@string/item_aula_professor" />
 
             <TextView
                 android:id="@+id/professor"
-                android:layout_width="290dp" />
+                android:layout_width="@dimen/recycler_colum2" />
         </TableRow>
     </TableLayout>
 

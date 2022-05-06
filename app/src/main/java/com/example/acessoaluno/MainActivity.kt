@@ -1,12 +1,13 @@
 package com.example.acessoaluno
 
+import android.Manifest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import com.example.acessoaluno.database.MakeActions
 
 class MainActivity : AppCompatActivity() {
@@ -28,10 +29,10 @@ class MainActivity : AppCompatActivity() {
         btnEnter = findViewById(R.id.acess)
         btnExit = findViewById(R.id.exit)
         textError = findViewById(R.id.failMessage)
-
-        user.setText("24461096")
-        password.setText("umasenha")
-
+        if(!Utilitys.isGPSActivated(baseContext)){
+            ActivityCompat.requestPermissions(this@MainActivity,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1)
+        }
         btnExit.setOnClickListener {
             this.moveTaskToBack(true)
             finish()

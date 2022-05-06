@@ -18,20 +18,24 @@ class CreateDatabase(private val context: Context) : SQLiteOpenHelper(context,DA
 
         putVals.registrarAula(DIA.SEGUNDA,"marcos",510,670,"Arquitetura de redes")
         putVals.registrarAula(DIA.QUARTA,"leandro",510,670,"Engenharia de software")
-        putVals.registrarAula(DIA.QUINTA,"marcos",510,670,"Banco de dados")
+        putVals.registrarAula(DIA.QUINTA,"Alexandre",510,670,"Banco de dados")
         putVals.registrarAula(DIA.SEXTA,"marcos",510,570,"Analise de sistemas")
 
-        putVals.registrarAula(DIA.SEGUNDA,"Mario",510,670,"Natação")
-        putVals.registrarAula(DIA.TERCA,"Mario",510,670,"Academia")
-        putVals.registrarAula(DIA.TERCA,"Mario",1200,1260,"Outra Aula")
-        putVals.registrarAula(DIA.TERCA,"Mario",1200,1260,"Mais Uma")
+        putVals.registrarAula(DIA.SEGUNDA,"Mario",510,670,"Neuropediatria")
+        putVals.registrarAula(DIA.TERCA,"Ana Maria",510,670,"Genética")
+        putVals.registrarAula(DIA.QUINTA,"Mario",1200,1260,"Neonatologia")
+        putVals.registrarAula(DIA.TERCA,"Mario",1200,1260,"Medicina da Adolescência")
 
         putVals.registrarAula(DIA.TERCA,"Marcos",0,1260,"Aula de teste terça")
         putVals.registrarAula(DIA.QUINTA,"Marcos",0,1260,"Aula de teste quinta")
+        putVals.registrarAula(DIA.SEXTA,"Marcos",0,1260,"Aula de teste Sexta")
+        putVals.registrarAula(DIA.SABADO,"Alexandre",0,60,"Aula de teste sabado")
+        putVals.registrarAula(DIA.SABADO,"Alexandre",60,700,"Aula de teste sabado 2")
+        putVals.registrarAula(DIA.SABADO,"Alex",700,1440,"Aula de teste sabado 3")
 
         putVals.registrarAluno("24461096","umasenha",arrayOf(1,2,3,4))
-        putVals.registrarAluno("13361096","senhaforte",arrayOf(5,6,7))
-        putVals.registrarAluno("teste","teste",arrayOf(8,9,10))
+        putVals.registrarAluno("13361096","senhaforte",arrayOf(5,6,7,8))
+        putVals.registrarAluno("teste","teste",arrayOf(9,10,11,12,13,14))
     }
 
     override fun onUpgrade(p0: SQLiteDatabase, p1: Int, p2: Int) {
