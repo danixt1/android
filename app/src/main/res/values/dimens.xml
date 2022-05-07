@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="recycler_colum1">96dp</dimen>
-    <dimen name="recycler_colum2">140dp</dimen>
+    <dimen name="recycler_colum2">180dp</dimen>
 </resources>

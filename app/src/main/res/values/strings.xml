@@ -7,7 +7,9 @@
     <string name="back">Voltar</string>
     <string name="user_invalid">Não Foi Possível Realizar o login, por favor verifique o seu RGM e senha</string>
 
+    <string name="disciplinas">Disciplinas</string>
     <string name="informacoes_title">Aulas de hoje</string>
+    <string name="informacoes_title_no_class">Não há aulas para hoje</string>
     <string name="item_aula_registrar">Registrar presença</string>
     <string name="item_aula_registrada">A Presença já foi registrada!</string>
     <string name="item_aula_inicio">Ínicio:</string>
@@ -21,4 +23,7 @@
     <string name="recycler_out_hour">Não foi possível registrar a presença, fora do horario</string>
     <string name="recycler_gps_authorization">É necessário permitir o aplicativo acessar a localização</string>
     <string name="recycler_sucess">Presença registrada com sucesso!</string>
+    <string name="recylcer_class_end">Aula Finalizada</string>
+
+    <string name="disciplinas_title">Suas disciplinas</string>
 </resources>

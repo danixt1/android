@@ -6,8 +6,10 @@
         <entry key="..\:/Users/danie/AndroidStudioProjects/AcessoAluno/app/src/main/res/layout/activity_informacoes.xml" value="0.25" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/AcessoAluno/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/AcessoAluno/app/src/main/res/layout/aula_item.xml" value="0.3041044776119403" />
-        <entry key="app/src/main/res/layout/activity_informacoes.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_disciplinas.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_informacoes.xml" value="0.33" />
         <entry key="app/src/main/res/layout/aula_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/disciplina_item.xml" value="0.33" />
       </map>
     </option>
   </component>

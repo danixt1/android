@@ -6,6 +6,7 @@ import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.acessoaluno.database.MakeActions
@@ -16,14 +17,16 @@ import kotlin.collections.ArrayList
 class Informacoes : AppCompatActivity() {
     private lateinit var aulaRecycler:RecyclerView
     private lateinit var textLocal:TextView
+    private lateinit var textTitle:TextView
+    private lateinit var btnDisc:Button
     @SuppressLint("MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacoes)
-
+        textTitle = findViewById(R.id.textTop)
         textLocal = findViewById(R.id.textlocalizacao)
         aulaRecycler = findViewById(R.id.recycler)
-
+        btnDisc = findViewById(R.id.btnDisciplina)
         var location = LocationServices.getFusedLocationProviderClient(baseContext)
 
         if(Utilitys.isGPSActivated(baseContext)){
@@ -36,6 +39,12 @@ class Informacoes : AppCompatActivity() {
         }
 
         val rgm = intent.getStringExtra("rgm")
+        btnDisc.setOnClickListener {
+            val disciplinas = Intent(this,Disciplinas::class.java).apply{
+                putExtra("rgm",rgm)
+            }
+            startActivity(disciplinas)
+        }
         val current = Date().toString().split(" ") // 0-dia semana abreviado 1- mes abreviado 2- dia do mes 3-HH:MM:mm 4-GMT 5- Ano
         var day:DIA? = null
 
@@ -67,7 +76,10 @@ class Informacoes : AppCompatActivity() {
                 //generateClass(professor,materia,inicio,fim)
             }
         }
-            aulaRecycler.adapter = AulaRecycler(aulas.toTypedArray(),rgm)
+        if(aulas.count() == 0){
+            textTitle.setText(R.string.informacoes_title_no_class)
+        }
+        aulaRecycler.adapter = AulaRecycler(aulas.toTypedArray(),rgm)
 
     }
     fun btnBack(view: View){

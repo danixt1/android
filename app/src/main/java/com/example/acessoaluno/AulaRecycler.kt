@@ -84,6 +84,7 @@ class AulaRecycler(private val aulas:Array<Aula>,private val rgm:String):Recycle
 
         }else{
             holder.btnRegistrar.setBackgroundColor(Color.RED)
+            holder.btnRegistrar.setText(R.string.recylcer_class_end)
         }
     }
 
